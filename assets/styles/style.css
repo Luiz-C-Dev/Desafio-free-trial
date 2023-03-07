@@ -1,0 +1,234 @@
+:root {
+  --vermelho: hsl(0, 100%, 74%);
+  --verde: hsl(154, 59%, 51%);
+  --azul: hsl(248, 32%, 49%);
+  --azul-escuro: hsl(249, 10%, 26%);
+  --azul-acinzentado: hsl(246, 25%, 77%);
+  --branco: #fdfdfd;
+  --fonte: "Poppins";
+}
+
+* {
+  color: var(--branco);
+  font-family: var(--fonte);
+}
+
+body {
+  background-color: var(--vermelho);
+  background-image: url(../img/bg-intro-desktop.png);
+}
+
+.error-message {
+  display: none;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo__info {
+  margin-left: 5rem;
+}
+
+.promo__container {
+  width: 580px;
+}
+
+.promo__title {
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+
+.promo__description {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  line-height: 1.5rem;
+}
+
+.promo__offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--azul);
+  border-radius: 10px;
+  height: 50px;
+  padding: 0.3rem;
+  font-size: 14px;
+  box-shadow: -1px 12px 10px -5px rgba(0, 0, 0, 0.384);
+}
+
+.promo__offer a {
+  text-decoration: none;
+}
+
+.promo__offer a strong {
+  font-weight: 700;
+}
+
+.claim__offer__form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  padding: 2rem 0 1.4rem 0;
+  height: 450px;
+  border-radius: 11px;
+  margin-top: 20px;
+  box-shadow: -1px 12px 10px -5px rgba(0, 0, 0, 0.384);
+}
+
+.claim__offer__form label {
+  display: flex;
+  justify-content: center;
+}
+
+.claim__offer__form label:nth-child(1) {
+  margin-top: 0.6rem;
+}
+
+.input__padrao {
+  width: 80%;
+  font-weight: 700;
+  border: 1px solid #aaaaaaf0;
+  border-radius: 6px;
+  padding: 1rem 0 1rem 2rem;
+  margin-bottom: 24px;
+  color: black;
+}
+
+.input__padrao:focus {
+  outline: 1px solid var(--azul-escuro);
+}
+
+.claim__free-trial {
+  display: flex;
+  justify-content: center;
+}
+
+.claim__free-trial button {
+  background: var(--verde);
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  height: 50px;
+  width: 86%;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  box-shadow: inset 0px -20px 30px -40px rgba(0, 0, 0, 1);
+}
+
+.claim__free-trial:hover {
+  filter: brightness(0.95);
+}
+
+.pre__terms-and-services {
+  font-size: 12px;
+  color: var(--azul-acinzentado);
+  text-align: center;
+  margin: 0.3rem 0;
+}
+
+.pre__terms-and-services a {
+  color: var(--vermelho);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1024px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  .promo__container {
+    width: 100%;
+    transform: scale(0.8);
+    text-align: center;
+  }
+
+  .promo__title {
+    font-size: 38px;
+    margin: 2.5rem 0 2rem 0;
+  }
+
+  .promo__description {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+
+  .promo__info {
+    margin: 0 1.6rem;
+  }
+
+  .promo__offer {
+    padding: 0 3rem;
+    line-height: 1.4rem;
+    height: 5rem;
+    text-align: center;
+  }
+
+  .claim__offer__form {
+    width: 100%;
+    padding: 0 0 1.1rem 0;
+  }
+
+  .claim__offer__form label:nth-child(1) {
+    margin-top: 1.2rem;
+  }
+
+  .input__padrao {
+    width: 75%;
+    padding: 1.3rem 0 1rem 1rem;
+    margin: 0.5rem auto; 
+    font-weight: 700;
+  }
+
+  .claim__free-trial {
+    margin: 0.5rem auto 0 auto;
+    width: 94%;
+    padding: 1rem auto;
+  }
+
+  .pre__terms-and-services {
+    transform: scale(0.9);
+    padding: 0 1.7rem;
+    line-height: 1.2rem;
+  }
+
+}
+
+@media screen and (min-width: 1px) and (max-width: 359px) {
+  body {
+    background-color: var(--azul-acinzentado);
+  }
+
+  .error-message {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    display: block;
+    padding: 0 1rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .error-message img {
+    width: 30%;
+    margin: 2rem auto;
+  }
+
+  .error-message p {
+    color: rgb(255, 255, 255);
+  }
+
+  main {
+    display: none;
+  }
+}
